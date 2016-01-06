@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/maihaoche/bumblebee.git"
+    "url": "https://github.com/maihaoche/node-b3.git"
   },
   "author": "Ourai Lin <ourairyu@hotmail.com> (http://ourai.ws/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/maihaoche/bumblebee/issues"
+    "url": "https://github.com/maihaoche/node-b3/issues"
   },
-  "homepage": "https://github.com/maihaoche/bumblebee",
+  "homepage": "https://github.com/maihaoche/node-b3",
   "keywords": [
     "maihaoche",
     "cli",
