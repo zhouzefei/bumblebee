@@ -33,6 +33,15 @@ fis
   .match("*.{css,js,jpg,png,gif}", {
     useHash: true
   })
+  .match("*.css", {
+    optimizer: fis.plugin("clean-css")
+  })
+  .match("*.js", {
+    optimizer: fis.plugin("uglify-js")
+  })
+  .match("*.png", {
+    optimizer: fis.plugin("png-compressor")
+  })
   .match("**", {
     release: "${qn_root}/$0",
     domain: "//img.maihaoche.com/"
