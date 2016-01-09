@@ -2,6 +2,8 @@
   "name": "b3-fis-demo",
   "version": "0.0.1",
   "devDependencies": {
-    "fis-parser-node-sass": "latest"
+    "rocketz": "latest",
+    "fis-parser-node-sass": "latest",
+    "fis3-deploy-qiniu": "latest"
   }
 }
