@@ -29,6 +29,9 @@ fis
     release: false
   });
 
+// 部署到测试环境
+// fis.media("qa");
+
 // 部署到七牛
 fis
   .media("prod_qiniu")
@@ -65,3 +68,6 @@ fis
     release: "/components/$1",
     url: "components/$1"
   });
+
+// 部署到顽兔
+// fis.media("prod_wantu");
