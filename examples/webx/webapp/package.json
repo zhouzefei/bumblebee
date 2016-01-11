@@ -4,6 +4,7 @@
   "devDependencies": {
     "rocketz": "latest",
     "fis-parser-node-sass": "latest",
-    "fis3-deploy-qiniu": "latest"
+    "fis3-deploy-qiniu": "latest",
+    "fis3-deploy-wantu": "latest"
   }
 }
