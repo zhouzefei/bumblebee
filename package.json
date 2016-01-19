@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/maihaoche/node-b3.git"
+    "url": "https://github.com/ourai/node-b3.git"
   },
   "author": "Ourai Lin <ourairyu@hotmail.com> (http://ourai.ws/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/maihaoche/node-b3/issues"
+    "url": "https://github.com/ourai/node-b3/issues"
   },
-  "homepage": "https://github.com/maihaoche/node-b3",
+  "homepage": "https://github.com/ourai/node-b3",
   "keywords": [
     "maihaoche",
     "cli",
