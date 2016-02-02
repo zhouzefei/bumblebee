@@ -55,7 +55,7 @@ cmd.register("init", function( args, opts ) {
  * Uploading local assets to cloud (CDN)
  *
  * Usage:
- *    b3 upload [flags]
+ *    b3 upload [--flags]
  *
  * Flags:
  *    - config        Configure cloud's info ('qiniu' & 'wantu' are available)
