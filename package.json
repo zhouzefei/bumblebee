@@ -4,6 +4,7 @@
   "description": "Command-line tool for front-end team of Maihaoche",
   "main": "index.js",
   "scripts": {
+    "postinstall": "node ./scripts/postinstall.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,9 +22,11 @@
     "cli",
     "front-end"
   ],
-  "engines": "node >= 0.10.0",
-  "bin": "./bin/bumblebee.js",
+  "engines": "node >= 0.12.0",
+  "bin": "./bin/cli.js",
   "dependencies": {
-    "rocketz": "latest"
+    "generator-mhc-activity": "latest",
+    "meow": "^3.7.0",
+    "yeoman-environment": "^1.5.2"
   }
 }
