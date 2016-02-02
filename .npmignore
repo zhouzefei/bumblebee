@@ -2,5 +2,3 @@
 .git
 
 node_modules/
-examples/
-npm-debug.log
