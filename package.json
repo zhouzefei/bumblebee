@@ -26,7 +26,9 @@
   "bin": "./bin/cli.js",
   "dependencies": {
     "generator-mhc-activity": "latest",
+    "lodash": "^4.2.0",
     "meow": "^3.7.0",
+    "rocketz": "~1",
     "yeoman-environment": "^1.5.2"
   }
 }
