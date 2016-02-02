@@ -1,6 +1,6 @@
 {
   "name": "b3",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Command-line tool for front-end team of Maihaoche",
   "main": "index.js",
   "scripts": {
