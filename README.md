@@ -1,5 +1,12 @@
 # Bumblebee
 
+[![NPM version][npm-ver]][npm-url]
+[![NPM download][npm-dm]][npm-url]
+
+[npm-ver]: https://img.shields.io/npm/v/b3.svg?style=flat-square
+[npm-dm]: https://img.shields.io/npm/dm/b3.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/b3
+
 Bumblebee，简称「b3」，就是那个大家都很熟悉的《变形金刚》里的卖萌好手！
 
 本工具会为前端工程提供极大方便！
