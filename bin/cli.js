@@ -5,7 +5,8 @@
 var _ = require("lodash");
 var meow = require("meow");
 
-var cmd = require("../lib/command");
+var cmd = require("../lib/core/command");
+var config = require("../lib/core/config");
 
 var cli = meow({
     // help: false,
@@ -102,6 +103,28 @@ cmd.register("upload", function( args, opts ) {
     if ( rocketz.preview() ) {
       rocketz.run();
     }
+  }
+});
+
+/**
+ * Publish front-end stuff
+ *
+ * Usage:
+ *    b3 publish [subcommand]
+ *
+ * Sub-commands:
+ *    - init          Configure front-end stuff's info
+ */
+cmd.register("publish", function( args, opts ) {
+  var publisher = require("../lib/publish");
+  var handler;
+
+  if ( args[0] ) {
+    handler = publisher[args[0]];
+  }
+
+  if ( handler ) {
+    handler(opts);
   }
 });
 
