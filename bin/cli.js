@@ -68,41 +68,16 @@ cmd.register("init", function( args, opts ) {
  *    - interactive   Whether interact with CLI (default is true)
  */
 cmd.register("upload", function( args, opts ) {
-  var rocketz, conf;
+  var uploader = require("../lib/commands/upload");
 
-  if ( opts.config ) {
-    require("rocketz/lib/config").setConfig(opts.config);
+  if ( args.length === 0 ) {
+    uploader.exec(opts);
+  }
+  else if ( args[0] === "init" ) {
+    uploader.init(args[1]);
   }
   else {
-    rocketz = require("rocketz");
-    conf = _.assign({
-        assets: ".",
-        remote: ".",
-        files: "",
-        exts: "",
-        deep: true,
-        interactive: true
-      }, opts);
-
-    ["files", "exts"].forEach(function( k ) {
-      var v = conf[k];
-
-      if ( v !== "" ) {
-        conf[k] = v.split(",");
-      }
-    });
-
-    ["deep", "interactive", "qiniu", "wantu"].forEach(function( c ) {
-      if ( opts[c] === "false" ) {
-        conf[c] = false;
-      }
-    });
-
-    rocketz.init(conf);
-
-    if ( rocketz.preview() ) {
-      rocketz.run();
-    }
+    console.log("无法识别你的指令 ˊ_>ˋ");
   }
 });
 
@@ -116,11 +91,14 @@ cmd.register("upload", function( args, opts ) {
  *    - init          Configure front-end stuff's info
  */
 cmd.register("publish", function( args, opts ) {
-  var publisher = require("../lib/publish");
+  var publisher = require("../lib/commands/publish");
   var handler;
 
   if ( args[0] ) {
     handler = publisher[args[0]];
+  }
+  else {
+    handler = publisher.exec;
   }
 
   if ( handler ) {
