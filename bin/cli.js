@@ -56,10 +56,13 @@ cmd.register("init", function( args, opts ) {
  * Uploading local assets to cloud (CDN)
  *
  * Usage:
- *    b3 upload [--flags]
+ *    b3 upload [subcommand][ --flags]
+ *
+ * Sub-commands:
+ *    - init          Configure RocketZ's info
+ *    - init [CDN]    Configure cloud's info ('qiniu' & 'wantu' are available)
  *
  * Flags:
- *    - config        Configure cloud's info ('qiniu' & 'wantu' are available)
  *    - assets        Local assets placed in (default is '.')
  *    - remote        Target directory uploaded to (default is '.')
  *    - files         Specify files' name to be uploaded (default is all)
