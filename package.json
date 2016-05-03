@@ -1,7 +1,7 @@
 {
   "name": "b3",
   "version": "0.3.0",
-  "description": "Command-line tool for front-end team of Maihaoche",
+  "description": "Command-line tool for front-end team of MaiHaoChe.com",
   "main": "index.js",
   "scripts": {
     "postinstall": "node ./scripts/postinstall.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/maihaoche/node-b3.git"
+    "url": "https://github.com/maihaoche/b3.git"
   },
   "author": "Ourai Lin <ourairyu@hotmail.com> (http://ourai.ws/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/maihaoche/node-b3/issues"
+    "url": "https://github.com/maihaoche/b3/issues"
   },
-  "homepage": "https://github.com/maihaoche/node-b3",
+  "homepage": "https://github.com/maihaoche/b3",
   "keywords": [
     "maihaoche",
     "cli",
