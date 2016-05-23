@@ -105,7 +105,7 @@ cmd.register("publish", function( args, opts ) {
   }
 
   if ( handler ) {
-    handler(opts);
+    handler(args, opts);
   }
 });
 
