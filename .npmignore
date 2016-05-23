@@ -1,4 +1,8 @@
 .DS_Store
 .git
 
-node_modules/
+.idea
+.editorconfig
+
+node_modules
+npm-debug.log
