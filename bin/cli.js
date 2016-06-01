@@ -2,13 +2,12 @@
 
 "use strict";
 
-var _ = require("lodash");
-var meow = require("meow");
+const meow = require("meow");
 
-var cmd = require("../lib/core/command");
-var config = require("../lib/core/config");
+const cmd = require("../lib/core/command");
+const config = require("../lib/core/config");
 
-var cli = meow({
+const cli = meow({
     // help: false,
     pkg: require("../package.json")
   }, {
@@ -18,7 +17,7 @@ var cli = meow({
     }
   });
 
-var args = cli.input;
+const args = cli.input;
 
 /**
  * Initialization
@@ -30,7 +29,7 @@ var args = cli.input;
  *    b3 init [generator-name]
  */
 cmd.register("init", function( args, opts ) {
-  var env;
+  let env;
 
   // Scaffold with Yeoman generators
   if ( args.length ) {
@@ -71,7 +70,7 @@ cmd.register("init", function( args, opts ) {
  *    - interactive   Whether interact with CLI (default is true)
  */
 cmd.register("upload", function( args, opts ) {
-  var uploader = require("../lib/commands/upload");
+  let uploader = require("../lib/commands/upload");
 
   if ( args.length === 0 ) {
     uploader.exec(opts);
@@ -94,8 +93,8 @@ cmd.register("upload", function( args, opts ) {
  *    - init          Configure front-end stuff's info
  */
 cmd.register("publish", function( args, opts ) {
-  var publisher = require("../lib/commands/publish");
-  var handler;
+  let publisher = require("../lib/commands/publish");
+  let handler;
 
   if ( args[0] ) {
     handler = publisher[args[0]];

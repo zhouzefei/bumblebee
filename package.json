@@ -4,8 +4,10 @@
   "description": "Command-line tool for front-end team of MaiHaoChe.com",
   "main": "index.js",
   "scripts": {
-    "postinstall": "node ./scripts/postinstall.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prebuild": "mkdir src && mv bin src/bin && mv lib src/lib",
+    "build": "babel src -d . --presets=es2015",
+    "prepublish": "npm run build",
+    "postpublish": "rm -rf bin && rm -rf lib && mv src/bin bin && mv src/lib lib && rm -rf src"
   },
   "repository": {
     "type": "git",
@@ -18,12 +20,18 @@
   },
   "homepage": "https://github.com/bumblebeejs/b3",
   "keywords": [
-    "maihaoche",
+    "bumblebeejs",
+    "bumblebee",
+    "b3",
     "cli",
-    "front-end"
+    "tool"
   ],
   "engines": "node >= 0.12.0",
-  "bin": "./bin/cli.js",
+  "bin": "bin/cli.js",
+  "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0"
+  },
   "dependencies": {
     "generator-mhc-activity": "latest",
     "inquirer": "^0.11.0",
