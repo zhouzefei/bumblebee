@@ -85,10 +85,35 @@ b3 upload --qiniu=false
 将前端文件进行发布。
 
 ```sh
-# 配置发布信息
+b3 publish [subcommand][ --flags]
+```
+
+其中 `subcommand` 的值可以是：
+
+* `init` - 初始化基本配置
+
+其中 `flags` 的值可以是：
+
+*  `media` - 指定要发布的环境所对应的配置
+
+在执行 `b3 publish init` 或 `b3 publish` 指定一个不存在的环境时会提示输入围绕着 FIS3 构建的配置信息：
+
+1. 配置文件 `fis-conf.js` 所在目录；
+2. 构建前所要执行的 shell 脚本，在 `b3` 命令执行的目录；
+3. 构建时所要执行的 shell 脚本，在 `fis-conf.js` 所在目录；
+4. 构建后索要执行的 shell 脚本，在 `b3` 命令执行的目录。
+
+如果指定环境的配置信息中的某项没设置，则采用基本配置。
+
+```sh
+# 配置通用环境
 b3 publish init
-# 开始发布
+# 配置线上环境
+b3 publish init --media=online
+# 用基本配置发布
 b3 publish
+# 用线上环境配置发布
+b3 publish --media=online
 ```
 
 ## 脚手架
